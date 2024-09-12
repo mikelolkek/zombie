@@ -12,8 +12,9 @@ int main() {
         numbers.push_back(num);
     }
 
-    sort(numbers.begin(), numbers.end());
-    cout << "Отсортированные числа:" << endl;
+    sort(numbers.begin(), numbers.end(), greater<int>());
+
+    cout << "Отсортированные числа (от max к min):" << endl;
 
     for (auto it = numbers.begin(); it != numbers.end(); ++it) {
         cout << *it << " ";
